@@ -1,0 +1,14 @@
+img{
+    max-width:50px;
+}
+button{
+    border-radius: 200px;
+    background-color: transparent;
+    border-color: transparent;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+button:hover{
+    background-color: rgba(59, 58, 58, 0.397);
+}

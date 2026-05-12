@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestionar Grandes Premios</title>
+    <link rel="stylesheet" href="../css/admin_common.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="../Data/img/iconoApp.png">
+</head>
+<body>
+
+    <button type="button" class="btn-fondo"></button>
+
+    <form id="gpForm">
+        <h1>Agregar GP</h1>
+        <div class="form-group">
+            <label>ID:</label>
+            <label id="gpID"></label>
+        </div>
+        <div class="form-group">
+            <label>Lugar:</label>
+            <select id="listlugar" required></select>
+        </div>
+        <div class="form-group">
+            <label>Fecha del Evento:</label>
+            <input type="date" id="dayEvent" required>
+        </div>
+        <div class="form-group">
+            <label>Hora del Evento:</label>
+            <input type="time" id="timeEvent" required>
+        </div>
+        <button type="submit">Agregar GP</button>
+    </form>
+
+    <div class="poop">
+        <div class="poop-content">
+            <h2>¿DESEA SALIR DE ESTA VENTANA?</h2>
+            <button id="yes">SI</button>
+            <button id="no">NO</button>
+        </div>
+    </div>
+
+    <h2 style="text-align:center;">Grandes Premios registrados</h2>
+    <table id="tablaGplist">
+        <thead><tr><th>ID</th><th>Lugar</th><th>Fecha</th><th>Hora</th></tr></thead>
+        <tbody></tbody>
+    </table>
+
+    <script type="module" src="../js/GP.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Control</title>
+    <link rel="stylesheet" href="../css/selectorAdmin.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="../Data/img/iconoApp.png">
+
+</head>
+<header class="topbar">
+    <h1>Panel de Control</h1>
+
+    <div class="sesion">
+        <div class="contenedorI">
+            <img src="../Data/img/btn_Admin.png" alt="Usuario">
+        </div>
+
+        <ul class="menu">
+            <h2>Administrador</h2>
+            <li>Ajustes</li>
+            <li>Cerrar sesión</li>
+        </ul>
+    </div>
+
+</header>
+
+<body id="bgm">
+
+
+    <div class="selectorAction">
+        <div class="fila">
+
+            <a href="color.html" class="card">
+                <img src="../Data/img/btn_color.png">
+                <span>COLORES</span>
+            </a>
+
+            <a href="gradas.html" class="card">
+                <img src="../Data/img/btn_grada.png">
+                <span>GRADAS</span>
+            </a>
+
+            <a href="Lugar.html" class="card">
+                <img src="../Data/img/btn_localizacion.png">
+                <span>LUGARES</span>
+            </a>
+
+            <a href="GP.html" class="card">
+                <img src="../Data/img/btn_gp.png">
+                <span>GP</span>
+            </a>
+
+            <a href="Boleto.html" class="card">
+                <img src="../Data/img/btn_boletos.png">
+                <span>BOLETOS</span>
+            </a>
+
+            <a href="Administrador.html" class="card">
+                <img src="../Data/img/btn_Admin.png">
+                <span>ADMINISTRADOR</span>
+            </a>
+
+            <a href="clientes.html" class="card">
+                <img src="../Data/img/btn_cliente.png">
+                <span>CLIENTES</span>
+            </a>
+
+        </div>
+    </div>
+
+    <script>
+        const boton = document.querySelector('.contenedorI');
+        const menu = document.querySelector('.menu');
+
+        // Abrir/cerrar menú
+        boton.addEventListener('click', (e) => {
+            e.stopPropagation(); // evita que se cierre al instante
+            menu.classList.toggle('activo');
+        });
+
+        // Cerrar al hacer click fuera
+        document.addEventListener('click', (e) => {
+            if (!menu.contains(e.target) && !boton.contains(e.target)) {
+                menu.classList.remove('activo');
+            }
+        });
+    </script>
+
+</body>
+
+</html>
