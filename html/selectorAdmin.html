@@ -20,7 +20,7 @@
         <ul class="menu">
             <h2>Administrador</h2>
             <li>Ajustes</li>
-            <li>Cerrar sesión</li>
+            <li id="cerrerSecion">Cerrar sesión</li>
         </ul>
     </div>
 
@@ -62,7 +62,7 @@
                 <span>ADMINISTRADOR</span>
             </a>
 
-            <a href="clientes.html" class="card">
+            <a href="viewerUser.html" class="card">
                 <img src="../Data/img/btn_cliente.png">
                 <span>CLIENTES</span>
             </a>
@@ -76,7 +76,7 @@
 
         // Abrir/cerrar menú
         boton.addEventListener('click', (e) => {
-            e.stopPropagation(); // evita que se cierre al instante
+            e.stopPropagation();
             menu.classList.toggle('activo');
         });
 
@@ -86,6 +86,10 @@
                 menu.classList.remove('activo');
             }
         });
+        document.getElementById("cerrerSecion").addEventListener("click",(e) => {
+            window.location.href = "../index.html";
+        } )
+
     </script>
 
 </body>
